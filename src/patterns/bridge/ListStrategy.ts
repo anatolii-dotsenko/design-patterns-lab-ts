@@ -5,11 +5,16 @@ export class ListStrategy implements IRenderStrategy {
         const container = document.createElement("div");
         container.classList.add("list-container");
         
-        // Visual indicator for the group
+        // --- THIS PART IS CRITICAL FOR VISIBILITY ---
         const label = document.createElement("div");
         label.classList.add("group-label");
-        label.innerText = "📂 Group";
+        label.innerText = "📂 Group"; // The visible text
+        label.style.color = "#888";   // Inline style fallback
+        label.style.fontSize = "0.8rem";
+        label.style.marginBottom = "5px";
+        
         container.appendChild(label);
+        // ---------------------------------------------
 
         element.appendChild(container);
         return container;

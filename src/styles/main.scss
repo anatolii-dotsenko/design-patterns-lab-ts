@@ -1,4 +1,6 @@
-/* Basic Reset */
+@use 'base';
+@use 'components';
+
 * {
     box-sizing: border-box;
 }
@@ -8,100 +10,97 @@ body {
     background-color: #f4f4f9;
     padding: 20px;
 }
-
-h1 {
-    color: #333;
-}
-
-/* Toolbar */
+/* 1. Toolbar & Buttons */
 .toolbar {
-    margin-bottom: 20px;
-    padding: 10px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-button {
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    margin-right: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
     
-    &:hover {
-        background-color: #e68900;
-    }
-
-    &:active {
-        transform: translateY(1px);
+    .divider {
+        color: #ddd;
+        font-size: 1.2rem;
+        margin: 0 4px;
     }
 }
 
-.divider {
-    color: #ccc;
-    margin: 0 10px;
+#resetBtn {
+    background-color: #2196F3; /* Blue for primary action */
+    &:hover { background-color: #1976D2; }
 }
 
-/* Renderer Area */
-.renderer {
-    margin-top: 20px;
-    padding: 20px;
-    background: white;
-    min-height: 300px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-/* --- LIST STRATEGY STYLES --- */
+/* 2. Group / List Container Visualization */
 .list-container {
-    border-left: 3px solid #ddd;
-    padding-left: 20px;
-    margin-top: 10px;
+    border-left: 2px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.02); /* Slight darkening for nesting */
+    margin: 10px 0 10px 20px; /* Indentation */
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-left-color: #ff9800;
+        background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    /* The "Group" Label added in TS */
+    .group-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: #888;
+        font-weight: bold;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+    }
 }
 
-.list-item {
-    padding: 8px;
+/* 3. Checklist & Checkbox Visualization */
+.checklist-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin: 5px 0;
-    background: #eee;
-    border-radius: 4px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* Checkbox Input Styling */
+    .custom-checkbox {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        accent-color: #4CAF50; /* Green checkbox */
+    }
+
+    /* When Checked: Visual Effects */
+    &.is-checked {
+        opacity: 0.6;
+        
+        .list-item, .grid-card {
+            text-decoration: line-through;
+            color: #666;
+        }
+    }
+}
+
+/* 4. Base Items */
+.list-item {
+    font-size: 1rem;
     color: #333;
 }
-
-.list-separator {
-    border: 0;
-    border-top: 1px solid #999;
-    margin: 15px 0;
+// differentiate reset button
+button#resetBtn {
+    background-color: #2196F3 !important; /* Force Blue */
+    border: 1px solid #1976D2;
+    font-weight: 900;
 }
 
-/* --- GRID STRATEGY STYLES --- */
-.grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 15px;
-    background: #f0f0f0;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
-.grid-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    min-width: 150px;
-    text-align: center;
-    border: 1px solid #eee;
-}
-
-.grid-separator {
-    width: 100%;
-    text-align: center;
-    color: #888;
-    margin: 10px 0;
-    font-weight: bold;
+button#resetBtn:hover {
+    background-color: #1976D2 !important;
 }
