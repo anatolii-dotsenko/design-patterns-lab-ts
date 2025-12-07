@@ -11,4 +11,24 @@
         <h1>TS Composite Editor</h1>
         
         <div class="toolbar">
-            <button id
+            <button id="resetBtn" class="btn-primary">To Root</button>
+            <span class="divider">|</span>
+            
+            <button id="addListBtn">Add Group</button>
+            <button id="addItemBtn">Add Item</button>
+            <button id="addSepBtn">Add Separator</button>
+            <span class="divider">|</span>
+            <button id="toggleViewBtn">Toggle View (List/Grid)</button>
+            <button id="toggleCheckBtn">Toggle Checkboxes</button>
+            <span class="divider">|</span>
+            <button id="exportBtn">Export MD</button>
+        </div>
+
+        <hr/>
+
+        <div id="app-root" class="renderer"></div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
