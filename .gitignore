@@ -36,3 +36,5 @@ coverage/
 *.zip
 *.rar
 *.sh
+/dist
+package-lock.json
