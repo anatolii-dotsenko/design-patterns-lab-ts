@@ -92,5 +92,3 @@ src/
 ## 📜 License
 
 This project is created for educational purposes.
-
-```
