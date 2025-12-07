@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composite List Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>TS Composite Editor</h1>
+        
+        <div class="toolbar">
+            <button id="addListBtn">Add Group</button>
+            <button id="addItemBtn">Add Item</button>
+            <button id="addSepBtn">Add Separator</button>
+            <span class="divider">|</span>
+            <button id="toggleViewBtn">Toggle View (List/Grid)</button>
+            <button id="toggleCheckBtn">Toggle Checkboxes</button>
+            <span class="divider">|</span>
+            <button id="exportBtn">Export MD</button>
+            <button id="resetBtn">To Root</button>
+        </div>
+
+        <hr/>
+
+        <div id="app-root" class="renderer"></div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
