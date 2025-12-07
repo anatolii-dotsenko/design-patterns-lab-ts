@@ -1,7 +1,3 @@
-Here is a comprehensive `README.md` file for your project. It documents the architecture, the design patterns applied, and provides clear instructions on how to build and run the application.
-
-### `README.md`
-
 ````markdown
 # TS Composite List Editor
 
@@ -99,5 +95,3 @@ src/
 This project is created for educational purposes.
 
 ```
-
----
