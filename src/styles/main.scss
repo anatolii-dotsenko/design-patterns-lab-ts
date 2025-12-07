@@ -1,7 +1,107 @@
-@import 'base';
-@import 'components';
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+}
 
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
     padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Toolbar */
+.toolbar {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    
+    &:hover {
+        background-color: #e68900;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.divider {
+    color: #ccc;
+    margin: 0 10px;
+}
+
+/* Renderer Area */
+.renderer {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    min-height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* --- LIST STRATEGY STYLES --- */
+.list-container {
+    border-left: 3px solid #ddd;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.list-item {
+    padding: 8px;
+    margin: 5px 0;
+    background: #eee;
+    border-radius: 4px;
+    color: #333;
+}
+
+.list-separator {
+    border: 0;
+    border-top: 1px solid #999;
+    margin: 15px 0;
+}
+
+/* --- GRID STRATEGY STYLES --- */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.grid-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-width: 150px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.grid-separator {
+    width: 100%;
+    text-align: center;
+    color: #888;
+    margin: 10px 0;
+    font-weight: bold;
 }
