@@ -1,4 +1,3 @@
-````markdown
 # TS Composite List Editor
 
 A framework-free Single Page Application (SPA) built with TypeScript. This project demonstrates advanced Object-Oriented Programming principles by implementing a hierarchical list editor using multiple structural and creational design patterns.
