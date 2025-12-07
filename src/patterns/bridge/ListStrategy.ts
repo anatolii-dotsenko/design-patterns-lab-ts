@@ -4,6 +4,13 @@ export class ListStrategy implements IRenderStrategy {
     renderContainer(element: HTMLElement): HTMLElement {
         const container = document.createElement("div");
         container.classList.add("list-container");
+        
+        // Visual indicator for the group
+        const label = document.createElement("div");
+        label.classList.add("group-label");
+        label.innerText = "📂 Group";
+        container.appendChild(label);
+
         element.appendChild(container);
         return container;
     }
